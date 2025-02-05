@@ -20,7 +20,8 @@ def go(args):
     # particular version of the artifact
     # artifact_local_path = run.use_artifact(args.input_artifact).file()
 
-    artifact_phat = run.use_artifact(args.input_artifacts).file()
+    artifact_phat = run.use_artifact(args.input_artifact).file()
+    
     df = pd.read_csv(artifact_phat)
     
     logging.basicConfig(level=logging.INFO)
